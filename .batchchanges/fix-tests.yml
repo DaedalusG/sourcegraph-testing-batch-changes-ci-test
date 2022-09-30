@@ -1,0 +1,24 @@
+name: fix-tests
+description: Fix Go and Rust Tests
+
+on:
+  - repositoriesMatchingQuery: repo:^github.com/sourcegraph-testing/bc-ci-test$
+
+steps:
+  - run: |
+      comby -in-place 'assert.Equal(t, :[v], "faz")' 'assert.Equal(t, :[v], "foo")' .go -matcher .go
+      comby -in-place 'assert_eq!(1, :[v])' 'assert_eq!(3, :[v])' .rs -matcher .rs
+    container: comby/comby
+
+  # Run CI
+  - run: cd go-app && go test ./...
+    container: golang:latest
+  - run: cargo test --manifest-path rust-app/Cargo.toml
+    container: rust:latest
+
+changesetTemplate:
+  title: Fix Unit tests
+  body: Fix failing tests
+  branch: fix-tests
+  commit:
+    message: Fix tests

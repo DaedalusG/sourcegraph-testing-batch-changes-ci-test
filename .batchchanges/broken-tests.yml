@@ -1,0 +1,22 @@
+name: broken-tests
+description: Run a batch change with failing tests
+
+on:
+  - repositoriesMatchingQuery: repo:^github.com/sourcegraph-testing/bc-ci-test$
+
+steps:
+  - run: echo Hello World | tee -a $(find -name README.md)
+    container: alpine:3
+
+  # Run CI
+  - run: cd go-app && go test ./...
+    container: golang:latest
+  - run: cargo test --manifest-path rust-app/Cargo.toml
+    container: rust:latest
+
+changesetTemplate:
+  title: Append Hello World to README
+  body: Update README
+  branch: broken-tests
+  commit:
+    message: Append Hello World to README

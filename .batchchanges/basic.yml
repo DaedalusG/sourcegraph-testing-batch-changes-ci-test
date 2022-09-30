@@ -1,0 +1,15 @@
+name: basic
+description: Add Hello World to README
+
+on:
+  - repositoriesMatchingQuery: repo:^github.com/sourcegraph-testing/bc-ci-test$
+
+steps:
+  - run: echo Hello World | tee -a $(find -name README.md)
+    container: alpine:3
+changesetTemplate:
+  title: Append Hello World to README
+  body: Update README
+  branch: basic-hello
+  commit:
+    message: Append Hello World to README
