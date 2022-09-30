@@ -1,8 +1,8 @@
-name: basic
+name: basic-ci
 description: Add Hello World to README
 
 on:
-  - repositoriesMatchingQuery: repo:^github.com/sourcegraph-testing/bc-ci-test$
+  - repositoriesMatchingQuery: repo:^github.com/sourcegraph-testing/batch-changes-ci-test$
 
 steps:
   - run: echo Hello World | tee -a $(find -name README.md)

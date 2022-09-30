@@ -2,7 +2,7 @@ name: broken-tests
 description: Run a batch change with failing tests
 
 on:
-  - repositoriesMatchingQuery: repo:^github.com/sourcegraph-testing/bc-ci-test$
+  - repositoriesMatchingQuery: repo:^github.com/sourcegraph-testing/batch-changes-ci-test$
 
 steps:
   - run: echo Hello World | tee -a $(find -name README.md)

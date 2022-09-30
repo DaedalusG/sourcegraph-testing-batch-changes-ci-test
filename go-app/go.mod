@@ -1,4 +1,4 @@
-module github.com/sourcegraph-testing/bc-ci-test
+module github.com/sourcegraph-testing/batch-changes-ci-test
 
 go 1.18
 

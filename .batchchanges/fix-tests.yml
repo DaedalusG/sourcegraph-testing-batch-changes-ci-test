@@ -2,7 +2,7 @@ name: fix-tests
 description: Fix Go and Rust Tests
 
 on:
-  - repositoriesMatchingQuery: repo:^github.com/sourcegraph-testing/bc-ci-test$
+  - repositoriesMatchingQuery: repo:^github.com/sourcegraph-testing/batch-changes-ci-test$
 
 steps:
   - run: |

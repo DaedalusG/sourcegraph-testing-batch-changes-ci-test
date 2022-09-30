@@ -29,10 +29,10 @@ In the case of [broken-tests.yml spec](./.batchchanges/broken-tests.yml), the sp
 ```text
 ✅ Executing... (1/1, 1 errored)  ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████  100%
 │                                                                                                                                                                                                               
-└── github.com/sourcegraph-testing/bc-ci-test  go: downloading github.com/stretchr/testify v1.8.0                                                                                                                            4s
+└── github.com/sourcegraph-testing/batch-changes-ci-test  go: downloading github.com/stretchr/testify v1.8.0                                                                                                                            4s
 
 ❌ Error:
-   github.com/sourcegraph-testing/bc-ci-test:
+   github.com/sourcegraph-testing/batch-changes-ci-test:
    run: cd go-app && go test ./...
    container: golang:latest
    
@@ -52,7 +52,7 @@ In the case of [broken-tests.yml spec](./.batchchanges/broken-tests.yml), the sp
                                         +faz
                         Test:           Test1
         FAIL
-        FAIL    github.com/sourcegraph-testing/bc-ci-test      0.003s
+        FAIL    github.com/sourcegraph-testing/batch-changes-ci-test      0.003s
         FAIL
    
    standard error:
