@@ -66,7 +66,7 @@ In the case of [broken-tests.yml spec](./.batchchanges/broken-tests.yml), the sp
 
 #### Server-side
 
-![img](./img/ssbc-failed-ci.png)
+![img](./imgs/ssbc-failed-ci.png)
 
 
 ## CI in batch change
@@ -76,4 +76,4 @@ to run the CI checks.
 
 ### Example Failure
 
-![img](./img/change-failed.png)
+![img](./imgs/change-failed.png)
